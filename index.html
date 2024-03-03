@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="heading">
+          <h1>Rock
+          Paper
+          Scissors</h1>
+      </div>
+      <div class="scores">
+      <div class="score">
+          <div class="score__title">Your score</div>
+          <div class="score__number" id="player_score">0</div>
+      </div>
+      <div class="score">
+          <div class="score__title">Computer score</div>
+          <div class="score__number" id="computer_score">0</div>
+      </div>
+      </div>
+  </div>
+
+    <main id="main">
+      <button class="btn-circle btn-paper pick" type="button" name="button"  data-choice="paper">
+        <span class="wrapper">
+          <img src="paper.png" alt="paper icon">
+        </span>
+      </button>
+
+      <button class="btn-circle btn-scissors pick" type="button" name="button" data-choice="scissors">
+        <span class="wrapper">
+          <img src="scissors.png" alt="scissors icon">
+        </span>
+      </button>
+
+      <button class="btn-circle btn-rock pick" type="button" name="button" data-choice="rock">
+        <span class="wrapper">
+          <img src="rock.png" alt="rock icon">
+        </span>
+      </button>
+    </main>
+
+    <button class="rules-btn" tabindex="1" onclick="showRules()">rules</button>
+    <button class="next-btn hidden">Next</button>
+
+    <div id="rules-popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closeRules()"><img src="X.png"/></span>
+        <h3 class="rules-heading">Game rules</h3>
+        <ul class="rules-list">
+          <li>Rock beats scissors, scissors beats paper, paper beats rock.</li>
+          <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+          <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+          <li>If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+      </div>
+    </div>
+
+
+
+  <div class="selection" id="selection">
+    <div class="user_choice">
+      <h2>You picked</h2>
+      <button class="btn-circle btn-paper" id="user_select" type="button" name="button">
+        <span class="wrapper">
+          <img src="paper.png" alt="paper icon">
+        </span>
+      </button>
+    </div>
+
+    <div class="result-text">
+      <h1><span id="win">win</span></h1>
+      <button class="btn-reset" id="reset" type="button" name="button">play again</button>
+    </div>
+
+    <div class="computer_choice">
+      <h2>The pc picked</h2>
+      <button class="btn-circle btn-rock" id="computer_select" type="button" name="button">
+        <span class="wrapper">
+          <img src="rock.png" alt="rock icon">
+        </span>
+      </button>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
