@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <style>
+        body{
+            background-color: rgba(148, 227, 62, 0.971);
+            
+        }
+
+        #star1{
+            position: absolute;
+            top:250px;
+            left:550px;
+
+        }
+
+        #star2{
+            position: absolute;
+            top:250px;
+            left:900px;
+
+        }
+
+        #star3{
+            position: absolute;
+            top:150px;
+            left:950px;
+
+        }
+
+        #star4{
+            position: absolute;
+            top:150px;
+            left:600px;
+
+        }
+
+        #star5{
+            position: absolute;
+            top:90px;
+            left:800px;
+
+        }
+
+        #star6{
+            position: absolute;
+            top:100px;
+            left:650px;
+
+        }
+
+        #star7{
+            position: absolute;
+            top:150px;
+            left:750px;
+
+        }
+
+        #star8{
+            position: absolute;
+            top:370px;
+            left:675px;
+
+        }
+
+        #victory{
+            position: absolute;
+            bottom:600px;
+            top:200px;
+            right:650px;
+        }
+
+        h1{
+            position: absolute;
+            bottom:100px;
+            right:500px;
+            font-size: 95px;
+            color:#fff;
+            
+        }
+
+        h2{
+            position: absolute;
+            bottom:85px;
+            right:550px;
+            color:#fff;
+            font-size:50px;
+        }
+
+        .rules-button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: none;
+            outline: none;
+            border: 2px solid white;
+            border-radius: 0.6rem;
+            color: white;
+            padding: 0.6rem 2.5rem;
+            font-family: inherit;
+            text-transform: inherit;
+            font-size: 1.3rem;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+        }
+
+        .btn{
+            position:absolute;
+            bottom:50px;
+            right:650px;
+            background-color:white;
+            outline: none;
+            border: 2px solid white;
+            border-radius: 0.6rem;
+            color: black;
+            padding: 0.6rem 2.5rem;
+            font-family: inherit;
+            text-transform: inherit;
+            font-size: 1.3rem;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+        }
+
+        .rules-heading {
+            text-align: center;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            bottom: 50px; 
+            right: 20px;
+            background-color: rgb(7, 64, 30);
+            border: 5px solid #ccc;
+            padding: 20px;
+            max-width: 300px;
+            z-index: 999;
+        }
+        
+        .popup-content {
+            color:white;
+        }
+        
+        
+        .close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+            background-color: red;
+        }
+
+
+        ul {
+            list-style-type: none; 
+            padding-left: 1em; 
+        }
+        
+        
+        ul li:before {
+            content: "\25AA"; 
+            color: yellow; 
+            margin-right: 0.5em; 
+            size: 10px;
+        }
+    </style>
+    
+    <script>
+        function showRules() {
+            const rulesPopup = document.getElementById("rules-popup");
+            rulesPopup.style.display = "block";
+        }
+
+
+        function closeRules() {
+            const rulesPopup = document.getElementById("rules-popup");
+            rulesPopup.style.display = "none";
+        }
+
+    </script>
+</head>
+<body>
+    
+    <img alt="star1" id="star1" src="Star 1.png">
+    <img alt="star2" id="star2" src="Star 6.png">
+    <img alt="star3" id="star3" src="Star 7.png">
+    <img alt="star4" id="star4" src="Star 9.png">
+    <img alt="victory" id="victory" src="Vector.png">
+    <img alt="star5" id="star5" src="Star 1.png">
+    <img alt="star6" id="star6" src="Star 7.png">
+    <img alt="star7" id="star7" src="Star 7.png">
+    <img alt="star8" id="star8" src="Star 7.png">
+
+
+    <h1>HURRAY!!</h1>
+    <h2>You won the game</h2>
+    <a href="index.html"><button class="btn">Play Again</button></a>
+    
+    <button class="rules-button" onclick="showRules()">Rules</button>
+
+    <div id="rules-popup" class="popup">
+      <div class="popup-content">
+        <span class="close" onclick="closeRules()"><img src="X.png"/></span>
+        <h3 class="rules-heading">Game rules</h3>
+        <ul class="rules-list">
+          <li>Rock beats scissors, scissors beats paper, paper beats rock.</li>
+          <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+          <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+          <li>If both players lay down the same hand, each player lays down another hand</li>
+        </ul>
+      </div>
+    </div>
+    
+</body>
+</html>
